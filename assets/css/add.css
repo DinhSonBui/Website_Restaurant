@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap");
+
+:root {
+  --blue: #47a5d1;
+  --green: #27ae60;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.heading span {
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+}
+
+.search-box {
+  position: relative;
+  top: 30px;
+  left: 450px;
+  width: 100%;
+  height: 50px;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 20px 50px;
+}
+
+.search-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: #f5f6fa;
+  border: 2px solid var(--black);
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+}
+.search-box .bx-search {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: var(--blue);
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.4 ease;
+  cursor: pointer;
+}
+
+.home-content {
+  margin-top: -150px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: none;
+  color: #130f40;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px var(--blue);
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: #ff7800;
+}
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+#category-product {
+  color: var(--black);
+  display: inline-block;
+  width: 100%;
+  padding: 8px 20px;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+form .button .back,
+form .button input {
+  width: 40%;
+  border-radius: 5px;
+  border: 0.1rem solid #130f40;
+  color: #130f40;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: none;
+}
+.button .back a {
+  display: flex;
+  color: #130f40;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+}
+
+.button .back:hover {
+  color: white;
+  background: var(--blue);
+}
+form .button input:hover {
+  color: white;
+  background: var(--blue);
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  color: var(--black);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--blue);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
